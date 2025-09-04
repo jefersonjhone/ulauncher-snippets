@@ -1,0 +1,18 @@
+{
+  "required_api_version": "^2.0.0",
+  "manifest_version": "2",
+  "name": "Snippets",
+  "description": "Execute ",
+  "developer_name": "Jeferson Jhone",
+  "icon": "images/snippet_purple.png",
+  "version": "1.0",
+  "api_version": "2",
+  "preferences": [
+    {
+        "id": "Snippets-1.0",
+        "type": "keyword",
+        "name": "Snippets",
+        "default_value": "s" 
+    }
+  ]
+}
