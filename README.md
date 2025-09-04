@@ -6,10 +6,10 @@
 
 To use **{clipboard}** and **{selection}** placeholders, **xclip** is required. You can install it with:
 
-&#96;&#96;&#96;bash
+```bash
 $ sudo apt update
 $ sudo apt install xclip
-&#96;&#96;&#96;
+```
 
 ## Features
 
@@ -65,11 +65,13 @@ Example:
 
 Datetime placeholders can receive *offset* and *format* attributes, for example:  
 
-&#96;&#96;&#96;text
+```text
 {date offset="+3d" format="%d/%m/%Y"}   -> 07/09/2025
+
 {time offset="+2h -30m" format="%H:%M"} -> 14:30
+
 {datetime format="%Y-%m-%d %H:%M:%S"}   -> 2025-09-04 12:45:00
-&#96;&#96;&#96;
+```
 
 ### Modifiers
 
@@ -130,7 +132,7 @@ The file must have a `.txt` extension and only needs to contain the template con
 
 Example:  
 
-&#96;&#96;&#96;txt
+```txt
 {{title|upper}}
 ## introduction
 {{introduction|title}}
@@ -138,13 +140,13 @@ Example:
 {{results}}
 
 {date} {time} by {user} at {snip:email}
-&#96;&#96;&#96;
+```
 
 And you type:
 
-&#96;&#96;&#96;bash
+```bash
 s adt !t_headme -f ~/templates/headme.txt
-&#96;&#96;&#96;
+```
 
 ### del 
 `-> delete a snippet`
@@ -180,7 +182,7 @@ Snippets are saved into an SQLite database to allow quick access and good perfor
 
 The processing flow to fill a template is:
 
-&#96;&#96;&#96;
+```
 [event - receive the values]
         ↓
 [replace {snip:}]
@@ -194,7 +196,7 @@ The processing flow to fill a template is:
 [apply modifiers]
         ↓
 [return the result]
-&#96;&#96;&#96;
+```
 
 ### Limitations
 
